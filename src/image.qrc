@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>EYE.JPG</file>
+        <file>LIB.png</file>
+        <file>pic/user.png</file>
+        <file>pic/seu.png</file>
+        <file>pic/user_2.png</file>
+        <file>pic/pss.png</file>
+        <file>pic/user_3.png</file>
+        <file>pic/pss_3.png</file>
+        <file>pic/school_g.gif</file>
+        <file>pic/school_4.png</file>
+        <file>pic/school_5.png</file>
+        <file>pic/school_2.png</file>
+        <file>pic/school_3.png</file>
+    </qresource>
+</RCC>
