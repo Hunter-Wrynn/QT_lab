@@ -1,0 +1,22 @@
+void Customer::updatePerson(double interest, string sign) {
+	time_t now = time(0);
+	tm* ltm = localtime(&now);
+	string fDate;
+	time_t timep;
+	time(&timep);
+	char tmp[256];
+	strftime(tmp, sizeof(tmp), "%Y-%m-%d", localtime(&timep));
+	ofstream outData2("temp.txt", ios::out);//写入 
+	ifstream inData2(INTEREST_FILE, ios::in);//读取 
+	if (!outData2 || !inData2) {
+		cout << endl << "对不起!!!找不到文件!!!" << endl;
+		system("pause");//暂停屏幕 
+		return;
+	}
+	string fName;
+	string fCash;
+	string fYear;
+	string fMonth;
+	string fDay;
+	string str;
+	double cash;

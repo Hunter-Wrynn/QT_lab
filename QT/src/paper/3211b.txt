@@ -1,0 +1,35 @@
+bool Customer::checkRepeat(string id)
+{
+	//检测顾客ID
+	for (vector<Customer>::iterator it = vCus.begin(); it != vCus.end(); it++)
+	{
+		if (id == it->m_Id)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+void Customer::initVector()
+{
+	//确保容器清空状态
+	vCus.clear();
+
+	//读取信息   顾客
+	ifstream ifs;
+	ifs.open(CUSTOMER_FILE, ios::in);
+	if (!ifs.is_open())
+	{
+		cout << "文件读取失败" << endl;
+		return;
+	}
+	Customer c;
+	while (ifs >> c.m_Name && ifs >> c.m_Id && ifs >> c.m_Pwd && ifs >> c.m_Tel)
+	{
+		vCus.push_back(c);
+	}
+
+	cout << "当前账户数量为： " << vCus.size() << endl;
+	ifs.close();
+
+}
